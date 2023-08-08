@@ -3,7 +3,6 @@ package com.bagih.belajarspring.lesson3
 import org.springframework.context.annotation.Primary
 import org.springframework.stereotype.Component
 
-@Primary
 @Component
 class ContentBasedFilter: Filter{
 
