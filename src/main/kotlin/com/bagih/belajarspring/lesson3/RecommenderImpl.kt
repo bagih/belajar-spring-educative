@@ -1,10 +1,15 @@
 package com.bagih.belajarspring.lesson3
 
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.beans.factory.annotation.Qualifier
 import org.springframework.stereotype.Component
 
 @Component
-class RecommenderImpl(@Autowired private val filter: Filter) {
+class RecommenderImpl(
+    @Autowired
+    @Qualifier("CF")
+    private val filter: Filter
+) {
 
 
     fun recommendedMovies(movie: String): List<String> {
