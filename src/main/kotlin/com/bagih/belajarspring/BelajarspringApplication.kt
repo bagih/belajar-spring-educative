@@ -1,8 +1,6 @@
 package com.bagih.belajarspring
 
-import com.bagih.belajarspring.lesson2.CollaborativeFilter
-import com.bagih.belajarspring.lesson2.ContentBasedFilter
-import com.bagih.belajarspring.lesson2.RecommenderImpl
+import com.bagih.belajarspring.lesson3.RecommenderImpl
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
@@ -10,9 +8,9 @@ import org.springframework.boot.runApplication
 class BelajarspringApplication
 
 fun main(args: Array<String>) {
-	runApplication<BelajarspringApplication>(*args)
+	val context = runApplication<BelajarspringApplication>(*args)
 
-	val recommenderImpl = RecommenderImpl(CollaborativeFilter())
+	val recommenderImpl = context.getBean(RecommenderImpl::class.java)
 	val results = recommenderImpl.recommendedMovies("KKN Desa Penari")
 	println(results.toString())
 }
