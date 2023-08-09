@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component
 @Component
 class RecommenderImpl(
     @Autowired
-    @Qualifier("CF")
+    @Qualifier("CBF")
     private val filter: Filter
 ) {
 
