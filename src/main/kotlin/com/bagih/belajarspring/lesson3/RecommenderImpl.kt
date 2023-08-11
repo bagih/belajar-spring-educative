@@ -12,16 +12,19 @@ import org.springframework.stereotype.Component
 class RecommenderImpl(
     @Autowired
     @Qualifier("CBF")
-    private var filter: Filter
+    private var filter: Filter,
 ) {
 
     private val logger = LoggerFactory.getLogger(this.javaClass)
+
+
 
     @Autowired
     fun setFilter(filter: Filter){
         logger.info("setFilter() in RecommenderImpl.. dependency injection")
         this.filter = filter
     }
+
 
     fun postConstruct(){
         logger.info("postConstruct() in RecommenderImpl is called")
