@@ -12,7 +12,7 @@ class RecommendationController {
         return listOf(
             Movie(1, "KKN Desa Penari", 4.5),
             Movie(2, "Menculik Miyabi", 5.0),
-            Movie(3, "air terjun pengantin", 3.0)
+            Movie(3, "aku bukan penjahat", 3.0)
         )
     }
 }
