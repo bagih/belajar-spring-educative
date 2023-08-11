@@ -35,6 +35,12 @@ dependencies {
 
 //	devtools
 	implementation("org.springframework.boot:spring-boot-devtools")
+
+//	actuator
+	implementation("org.springframework.boot:spring-boot-starter-actuator")
+
+//	Hal browser
+	implementation("org.springframework.data:spring-data-rest-hal-browser:3.3.6.RELEASE")
 }
 
 tasks.withType<KotlinCompile> {
